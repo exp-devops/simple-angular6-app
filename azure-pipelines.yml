@@ -20,6 +20,12 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'test'
+    runOptions: 'commands'
+    commands: 'sudo apt-get install wget'
+    readyTimeout: '20000'
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'test'
