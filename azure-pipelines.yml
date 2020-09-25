@@ -29,7 +29,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'test'
-    sourceFolder: '$(System.DefaultWorkingDirectory)'
+    sourceFolder: './dist'
     contents: '**'
     targetFolder: '/home/azureuser/'
     readyTimeout: '20000'
