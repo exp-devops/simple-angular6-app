@@ -20,3 +20,10 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'test'
+    sourceFolder: '$(System.DefaultWorkingDirectory)'
+    contents: '**'
+    targetFolder: '/home'
+    readyTimeout: '20000'
