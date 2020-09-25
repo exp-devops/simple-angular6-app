@@ -31,5 +31,5 @@ steps:
     sshEndpoint: 'test'
     sourceFolder: '$(System.DefaultWorkingDirectory)'
     contents: '**'
-    targetFolder: '/home'
+    targetFolder: '/home/azureuser/'
     readyTimeout: '20000'
